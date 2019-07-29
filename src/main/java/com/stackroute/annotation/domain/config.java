@@ -9,14 +9,14 @@ import org.springframework.context.annotation.Configuration;
 public class config {
 
     @Bean(name = "actorRole")
-    public Actor movie1()
+    public Actor actor1()
     {
         Actor actor =new Actor();
         return actor;
     }
 
-    @Bean
-    public Movie movie2()
+    @Bean(name="movieRole")
+    public Movie movie()
     {
         Movie movie=new Movie();
         movie.setActor(actor());
