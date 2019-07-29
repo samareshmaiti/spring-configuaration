@@ -9,19 +9,24 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-public class App 
+public class App
 {
     public static void main( String[] args ) {
-//        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-//        Movie movie = (Movie) context.getBean("movie");
-        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(config.class);
-       Movie movie1=annotationConfigApplicationContext.getBean("movie1",Movie.class);
-        System.out.println(movie1);
+//       ********************* First Assignment************************************
 
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(config.class);
+       Actor actor = (Actor) annotationConfigApplicationContext.getBean("actorRole");
+        System.out.println(actor.toString());
+//******************Second Assignment********************************
         Movie movie = annotationConfigApplicationContext.getBean("movie", Movie.class);
-        Actor actor = annotationConfigApplicationContext.getBean("actor", Actor.class);
-       // Movie movie2 = annotationConfigApplicationContext.getBean("movieBean2", Movie.class);
+        Actor actor1 = annotationConfigApplicationContext.getBean("actor", Actor.class);
         System.out.println(movie);
-        System.out.println(actor);
+        System.out.println(actor1);
+        //*************Third Assignment***********************
+        Movie movie2 = annotationConfigApplicationContext.getBean("movie", Movie.class);
+        Actor actor2 = annotationConfigApplicationContext.getBean("actor", Actor.class);
+        System.out.println(movie2);
+        System.out.println(actor2);
+
     }
 }

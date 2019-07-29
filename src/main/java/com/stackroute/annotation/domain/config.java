@@ -5,30 +5,30 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "com.stackroute.annotation")
+@ComponentScan(basePackages = "com.stackroute.annotation.domain")
 public class config {
-    @Bean
-    public Movie movie1()
+
+    @Bean(name = "actorRole")
+    public Actor movie1()
     {
-        Movie movie1=new Movie();
-        movie1.setActor(actor());
-        return new Movie();
+        Actor actor =new Actor();
+        return actor;
     }
 
     @Bean
-    public Movie movie()
+    public Movie movie2()
     {
         Movie movie=new Movie();
         movie.setActor(actor());
-        return new Movie();
+        return movie;
     }
 
     @Bean
     public Actor actor()
     {
-        Actor actor=new Actor();
+        Actor actor = new Actor();
 
-        return new Actor();
+        return actor;
     }
 }
 

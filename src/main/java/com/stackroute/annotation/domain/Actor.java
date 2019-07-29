@@ -13,7 +13,8 @@ public class Actor  {
     private String name;
     @Value("Male")
     private String gender;
-    @Autowired
+
+@Autowired
     public Actor(int age, String name, String gender) {
 
         this.age = age;
