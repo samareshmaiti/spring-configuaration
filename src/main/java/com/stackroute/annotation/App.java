@@ -1,6 +1,7 @@
 package com.stackroute.annotation;
 
 import com.stackroute.annotation.domain.Actor;
+import com.stackroute.annotation.domain.BeanLifeCycleDemoBean;
 import com.stackroute.annotation.domain.Movie;
 import com.stackroute.annotation.domain.config;
 import org.springframework.context.ApplicationContext;
@@ -36,7 +37,10 @@ public class App
         Actor actor3 = annotationConfigApplicationContext.getBean("actor", Actor.class);
         System.out.println(movie3);
         System.out.println(actor3);
-
+        //***************Assignment5**************
+        BeanLifeCycleDemoBean beanLifeCycle=annotationConfigApplicationContext.getBean("beanLifeCycle", BeanLifeCycleDemoBean.class);
+        System.out.println(beanLifeCycle);
+        annotationConfigApplicationContext.close();
 
     }
 }

@@ -30,5 +30,12 @@ public class config {
 
         return actor;
     }
+
+    @Bean(name="beanLifeCycle")
+    public BeanLifeCycleDemoBean beanLifeCycleDemoBean()
+    {
+        BeanLifeCycleDemoBean lifeCycleDemoBean=new BeanLifeCycleDemoBean();
+        return lifeCycleDemoBean;
+    }
 }
 
