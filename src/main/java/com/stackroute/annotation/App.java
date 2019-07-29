@@ -1,9 +1,6 @@
 package com.stackroute.annotation;
 
-import com.stackroute.annotation.domain.Actor;
-import com.stackroute.annotation.domain.BeanLifeCycleDemoBean;
-import com.stackroute.annotation.domain.Movie;
-import com.stackroute.annotation.domain.config;
+import com.stackroute.annotation.domain.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -41,6 +38,9 @@ public class App
         BeanLifeCycleDemoBean beanLifeCycle=annotationConfigApplicationContext.getBean("beanLifeCycle", BeanLifeCycleDemoBean.class);
         System.out.println(beanLifeCycle);
         annotationConfigApplicationContext.close();
+        //*************Assignment6***********
+        BeanPostProcessorBean beanPostProcessorBean=annotationConfigApplicationContext1.getBean("beanPostProcessor",BeanPostProcessorBean.class);
+        System.out.println(beanPostProcessorBean);
 
     }
 }

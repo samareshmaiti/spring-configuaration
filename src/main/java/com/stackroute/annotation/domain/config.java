@@ -37,5 +37,11 @@ public class config {
         BeanLifeCycleDemoBean lifeCycleDemoBean=new BeanLifeCycleDemoBean();
         return lifeCycleDemoBean;
     }
+    @Bean(name="beanPostProcessor")
+    public BeanPostProcessorBean beanPostProcessorBean()
+    {
+        BeanPostProcessorBean postProcessorBean=new BeanPostProcessorBean();
+        return postProcessorBean;
+    }
 }
 

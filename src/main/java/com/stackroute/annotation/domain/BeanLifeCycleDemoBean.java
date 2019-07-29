@@ -1,10 +1,11 @@
 package com.stackroute.annotation.domain;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Component;
 
 //import javax.annotation.PostConstruct;
 import javax.annotation.*;
-
+@Component
 public class BeanLifeCycleDemoBean implements InitializingBean, DisposableBean {
     @Override
     public void destroy() throws Exception {
